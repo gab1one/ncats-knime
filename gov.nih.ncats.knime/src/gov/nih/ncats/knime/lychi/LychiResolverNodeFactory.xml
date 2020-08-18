@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<knimeNode icon="./default.png" type="Manipulator" xmlns="http://knime.org/node/v2.8" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://knime.org/node/v2.10 http://knime.org/node/v2.10.xsd">
+    <name>Lychi Resolver</name>
+    
+    <shortDescription>
+        This node resolves a chemical structure to Layered Chemical Identifier (LyChI).
+    </shortDescription>
+    
+    <fullDescription>
+        <intro>This node uses the LyChI library (https://github.com/ncats/lychi) developed at the NCATS/NIH to resolve chemical structures (SMILES, MOL or SDF) into LyChI identifiers. LyChI performs chemical structure standardization followed by generation of a hashcode.</intro>
+        <option name="Structure column">The input column containing structures in one of these three formats: SMILES, MOL or SDF.</option>
+        <option name="Output column name">The name of the output column, which will contain the Lychi identifiers.</option>
+        <option name="Remove Salt/Solvent">Toggles removal of salt and solvent components from the input structures.</option>
+        <option name="Keto-Enol Tautomerism">Toggles generation of keto-enol tautomers in the standardization process.</option>
+    </fullDescription>
+    
+    <ports>
+        <inPort index="0" name="Structures to parse">Input table containing structures to parse</inPort>
+        <outPort index="0" name="Resolved structures">Output table containing Lychi identifiers</outPort>
+        <outPort index="1" name="Unresolved structures">Table with rows that failed to be processed</outPort>
+    </ports>
+</knimeNode>

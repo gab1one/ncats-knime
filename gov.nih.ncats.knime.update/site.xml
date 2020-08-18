@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/gov.nih.ncats.knime.feature_1.1.1.202008181140.jar" id="gov.nih.ncats.knime.feature" version="1.1.1.202008181140">
+      <category name="gov.nih.ncats.knime"/>
+   </feature>
+   <category-def name="gov.nih.ncats.knime" label="NCATS KNIME Nodes"/>
+</site>
